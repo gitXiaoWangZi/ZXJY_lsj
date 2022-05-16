@@ -1,0 +1,6 @@
+framework module Pods_XZJY {
+  umbrella header "Pods-XZJY-umbrella.h"
+
+  export *
+  module * { export * }
+}
