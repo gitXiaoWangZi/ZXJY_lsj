@@ -16,6 +16,8 @@
 		401B3D252832866300C4B5A9 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401B3D242832866300C4B5A9 /* Message.storyboard */; };
 		401B3D272832868700C4B5A9 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401B3D262832868700C4B5A9 /* Address.storyboard */; };
 		401B3D292832869600C4B5A9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401B3D282832869600C4B5A9 /* Profile.storyboard */; };
+		401B3D2B283287C200C4B5A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401B3D2A283287C200C4B5A9 /* HomeViewController.swift */; };
+		401B3D2D28328A0E00C4B5A9 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401B3D2C28328A0E00C4B5A9 /* UIBarButtonItem-Extension.swift */; };
 		F82CB60CEA63C4A3F6FD12C3 /* Pods_XZJY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751F1343D496AC94EF45B92 /* Pods_XZJY.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		401B3D242832866300C4B5A9 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		401B3D262832868700C4B5A9 /* Address.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		401B3D282832869600C4B5A9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		401B3D2A283287C200C4B5A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		401B3D2C28328A0E00C4B5A9 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		9F278B843410F9FE1457E3C8 /* Pods-XZJY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.debug.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.debug.xcconfig"; sourceTree = "<group>"; };
 		DF80106840366EE820151512 /* Pods-XZJY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.release.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,48 +107,17 @@
 		401B3CF728327B6300C4B5A9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				401B3CF828327B6300C4B5A9 /* ViewModel */,
-				401B3CF928327B6300C4B5A9 /* Logic */,
-				401B3CFA28327B6300C4B5A9 /* Model */,
-				401B3CFB28327B6300C4B5A9 /* View */,
-				401B3CFC28327B6300C4B5A9 /* ViewController */,
+				401B3CF828327B6300C4B5A9 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		401B3CF828327B6300C4B5A9 /* ViewModel */ = {
+		401B3CF828327B6300C4B5A9 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				401B3D2C28328A0E00C4B5A9 /* UIBarButtonItem-Extension.swift */,
 			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		401B3CF928327B6300C4B5A9 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		401B3CFA28327B6300C4B5A9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		401B3CFB28327B6300C4B5A9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		401B3CFC28327B6300C4B5A9 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		401B3CFD28327B6300C4B5A9 /* Message */ = {
@@ -383,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				401B3D22283283FF00C4B5A9 /* Home.storyboard */,
+				401B3D2A283287C200C4B5A9 /* HomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -517,6 +491,8 @@
 			files = (
 				401B3CDD2832790100C4B5A9 /* AppDelegate.swift in Sources */,
 				401B3CDF2832790100C4B5A9 /* SceneDelegate.swift in Sources */,
+				401B3D2D28328A0E00C4B5A9 /* UIBarButtonItem-Extension.swift in Sources */,
+				401B3D2B283287C200C4B5A9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

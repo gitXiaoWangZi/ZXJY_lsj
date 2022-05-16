@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="803" y="-642"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="nID-aY-yud">
             <objects>
-                <viewController id="IEp-gT-ull" sceneMemberID="viewController">
+                <viewController id="IEp-gT-ull" customClass="HomeViewController" customModule="XZJY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TIr-AC-1gx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
