@@ -23,7 +23,7 @@
                         <segue destination="dRe-OG-7vb" kind="relationship" relationship="viewControllers" id="umu-GP-a7c"/>
                         <segue destination="Cln-Ap-he5" kind="relationship" relationship="viewControllers" id="DOd-LY-OL5"/>
                         <segue destination="1Ag-Qq-PUn" kind="relationship" relationship="viewControllers" id="qog-y9-o0T"/>
-                        <segue destination="4Cu-tZ-O10" kind="relationship" relationship="viewControllers" id="O4Q-OT-fwH"/>
+                        <segue destination="yiy-kU-EWL" kind="relationship" relationship="viewControllers" id="0QX-aJ-fDO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwi-mr-V1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,7 +45,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-GC-AFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="33"/>
+            <point key="canvasLocation" x="803" y="1"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="abs-pg-5hB">
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UK0-xs-2HH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="33"/>
+            <point key="canvasLocation" x="1503" y="1"/>
         </scene>
         <!--通讯录-->
         <scene sceneID="qO5-IN-bIo">
@@ -78,7 +78,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdN-Ou-iQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="737"/>
+            <point key="canvasLocation" x="803" y="650"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QuO-jd-OMF">
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYM-MJ-emQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="1450"/>
+            <point key="canvasLocation" x="1532" y="1314"/>
         </scene>
         <!--我的-->
         <scene sceneID="zx9-fK-ByA">
@@ -111,7 +111,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afB-Bp-Jw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="1450"/>
+            <point key="canvasLocation" x="803" y="1314"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GwP-HL-gw1">
@@ -127,17 +127,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7C-x3-LME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="737"/>
+            <point key="canvasLocation" x="1532" y="650"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="rWF-Op-zly">
+        <!--传承-->
+        <scene sceneID="EsQ-Vb-EDf">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="4Cu-tZ-O10" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kx7-xm-AWY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tZM-Mv-6EQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="yiy-kU-EWL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="传承" id="kpj-tk-SK2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jPd-Ew-tCZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IEp-gT-ull" kind="relationship" relationship="rootViewController" id="Dmi-7N-UT3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5z0-5n-qKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="-319"/>
+            <point key="canvasLocation" x="803" y="-642"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nID-aY-yud">
+            <objects>
+                <viewController id="IEp-gT-ull" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TIr-AC-1gx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AWh-F3-Vge"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7fR-iI-KRX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTh-7v-eUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="-642"/>
         </scene>
     </scenes>
     <resources>
