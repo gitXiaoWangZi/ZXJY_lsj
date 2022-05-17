@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cln-Ap-he5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,8 +12,8 @@
         <!--通讯录-->
         <scene sceneID="qO5-IN-bIo">
             <objects>
-                <navigationController id="Cln-Ap-he5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="通讯录" id="OrC-PX-U1t"/>
+                <navigationController id="Cln-Ap-he5" customClass="MainNavigationController" customModule="XZJY" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="通讯录" image="tabbar_address" selectedImage="tabbar_address_select" id="OrC-PX-U1t"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUC-T1-dxb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +31,7 @@
             <objects>
                 <viewController id="mnP-WT-5aH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S6v-C1-2RT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Vk1-kk-BPq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -42,6 +44,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tabbar_address" width="25" height="25"/>
+        <image name="tabbar_address_select" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

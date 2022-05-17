@@ -26,7 +26,8 @@ extension UIBarButtonItem {
         
         button.setTitle(title, for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .gray
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.backgroundColor = UIColor(r: 243, g: 239, b: 242)
         button.sizeToFit()
         button.layer.cornerRadius = button.bounds.size.height / 2
         button.layer.masksToBounds = true

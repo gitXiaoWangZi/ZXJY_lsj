@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="um3-XE-4kd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +33,7 @@
         <scene sceneID="wpP-Ig-CFn">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="dgQ-g3-aj0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MkC-3U-uCf" userLabel="传承"/>
+                    <tabBarItem key="tabBarItem" title="传承" image="tabbar_home" selectedImage="tabbar_home_select" id="MkC-3U-uCf" userLabel="传承"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DH-0w-zsq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +43,7 @@
         <scene sceneID="ECi-Gj-PYk">
             <objects>
                 <viewControllerPlaceholder storyboardName="Message" id="XOl-Bi-WpB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Xu7-rI-obi" userLabel="消息"/>
+                    <tabBarItem key="tabBarItem" title="Item" landscapeImage="tabbar_message" selectedImage="tabbar_message_select" id="Xu7-rI-obi" userLabel="消息"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMp-Xk-0bp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,4 +70,10 @@
             <point key="canvasLocation" x="304" y="473"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_home" width="25" height="25"/>
+        <image name="tabbar_home_select" width="25" height="25"/>
+        <image name="tabbar_message" width="25" height="25"/>
+        <image name="tabbar_message_select" width="25" height="25"/>
+    </resources>
 </document>

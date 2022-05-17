@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yiy-kU-EWL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,11 +12,12 @@
         <!--传承-->
         <scene sceneID="EsQ-Vb-EDf">
             <objects>
-                <navigationController id="yiy-kU-EWL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="传承" id="kpj-tk-SK2"/>
+                <navigationController id="yiy-kU-EWL" customClass="MainNavigationController" customModule="XZJY" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="传承" image="tabbar_home" selectedImage="tabbar_home_select" id="kpj-tk-SK2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jPd-Ew-tCZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="IEp-gT-ull" kind="relationship" relationship="rootViewController" id="Dmi-7N-UT3"/>
@@ -43,6 +45,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tabbar_home" width="25" height="25"/>
+        <image name="tabbar_home_select" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Ag-Qq-PUn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +14,7 @@
             <objects>
                 <viewController id="57b-tK-vyn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="baO-Z6-6uN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Iof-fY-UMa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,8 +28,8 @@
         <!--我的-->
         <scene sceneID="zx9-fK-ByA">
             <objects>
-                <navigationController id="1Ag-Qq-PUn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="cTb-QH-czB"/>
+                <navigationController id="1Ag-Qq-PUn" customClass="MainNavigationController" customModule="XZJY" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="tabbar_profile" selectedImage="tabbar_profile_select" id="cTb-QH-czB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="75a-Jm-d3H">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -42,6 +44,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tabbar_profile" width="25" height="25"/>
+        <image name="tabbar_profile_select" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,7 +7,27 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+private let cellID = "cellid"
+class HomeViewController: BaseViewController {
+    
+    private lazy var collectionView : UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSize(width: kScreenWidth - 40, height: 100)
+        flowLayout.minimumLineSpacing = 10
+        flowLayout.minimumInteritemSpacing = 0
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.headerReferenceSize = CGSize(width: 10, height: kScreenHeight)
+        flowLayout.footerReferenceSize = CGSize(width: 10, height: kScreenHeight)
+        
+        let collectionV = UICollectionView(frame: CGRect(x: 0, y: kNavBarAndStatusBarHeight, width: kScreenWidth, height: kScreenHeight - kNavAndTabHeight), collectionViewLayout: flowLayout)
+        collectionV.backgroundColor = UIColor.yellow
+        collectionV.dataSource = self
+        collectionV.delegate = self
+        collectionV.isPagingEnabled = true
+        collectionV.register(UINib(nibName: "LiveCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellID)
+//        collectionV.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        return collectionV
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,13 +35,62 @@ class HomeViewController: UIViewController {
         
         setupUI()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        navigationController?.pushViewController(ssViewController(), animated: true)
+    }
 
 }
 // MARK: -设置UI界面
 extension HomeViewController {
     private func setupUI() {
+        //设置navbar
+        setupNavBar()
+        //设置collectionview
+        setupCollectionView()
+    }
+    
+    private func setupNavBar() {
         let barItem = UIBarButtonItem(imageName: "nav", size: CGSize(width: 20, height: 20))
         let twoBarItem = UIBarButtonItem(title: "  好32454的 >  ")
         navigationItem.leftBarButtonItems = [barItem,twoBarItem]
     }
+    
+    private func setupCollectionView(){
+        view.addSubview(collectionView)
+    }
 }
+
+// MARK: -设置CollectionView代理
+extension HomeViewController : UICollectionViewDataSource,UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        return cell
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offset = collectionView.contentOffset
+        let index = offset.x / kScreenWidth
+        print(index)
+        if index * 10 > 10 || index == 0 {
+            return
+        }
+        self.collectionView.setContentOffset(CGPoint(x: offset.x - 30, y: 0), animated: true)
+
+        
+        
+    }
+}
+
