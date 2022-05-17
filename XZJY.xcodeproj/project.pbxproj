@@ -25,6 +25,11 @@
 		4B46CAFB28333902006DB41E /* MainBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CAFA28333902006DB41E /* MainBaseViewController.swift */; };
 		4B46CAFF28333F11006DB41E /* LiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CAFD28333F11006DB41E /* LiveCollectionViewCell.swift */; };
 		4B46CB0028333F11006DB41E /* LiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B46CAFE28333F11006DB41E /* LiveCollectionViewCell.xib */; };
+		4B46CB02283382BF006DB41E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CB01283382BF006DB41E /* ProfileViewController.swift */; };
+		4B46CB0728338540006DB41E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CB0528338540006DB41E /* ProfileTableViewCell.swift */; };
+		4B46CB0828338540006DB41E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B46CB0628338540006DB41E /* ProfileTableViewCell.xib */; };
+		4B46CB0B2833A543006DB41E /* ProfileFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CB092833A543006DB41E /* ProfileFooterView.swift */; };
+		4B46CB0C2833A543006DB41E /* ProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B46CB0A2833A543006DB41E /* ProfileFooterView.xib */; };
 		F82CB60CEA63C4A3F6FD12C3 /* Pods_XZJY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751F1343D496AC94EF45B92 /* Pods_XZJY.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +55,11 @@
 		4B46CAFA28333902006DB41E /* MainBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBaseViewController.swift; sourceTree = "<group>"; };
 		4B46CAFD28333F11006DB41E /* LiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B46CAFE28333F11006DB41E /* LiveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCollectionViewCell.xib; sourceTree = "<group>"; };
+		4B46CB01283382BF006DB41E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4B46CB0528338540006DB41E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		4B46CB0628338540006DB41E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		4B46CB092833A543006DB41E /* ProfileFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFooterView.swift; sourceTree = "<group>"; };
+		4B46CB0A2833A543006DB41E /* ProfileFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFooterView.xib; sourceTree = "<group>"; };
 		9F278B843410F9FE1457E3C8 /* Pods-XZJY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.debug.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.debug.xcconfig"; sourceTree = "<group>"; };
 		DF80106840366EE820151512 /* Pods-XZJY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.release.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +165,7 @@
 		401B3D0328327B6300C4B5A9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4B46CB042833852C006DB41E /* View */,
 				401B3D0828327B6300C4B5A9 /* ViewController */,
 			);
 			path = Profile;
@@ -164,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				401B3D282832869600C4B5A9 /* Profile.storyboard */,
+				4B46CB01283382BF006DB41E /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -234,6 +246,17 @@
 			children = (
 				4B46CAFD28333F11006DB41E /* LiveCollectionViewCell.swift */,
 				4B46CAFE28333F11006DB41E /* LiveCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B46CB042833852C006DB41E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B46CB0528338540006DB41E /* ProfileTableViewCell.swift */,
+				4B46CB092833A543006DB41E /* ProfileFooterView.swift */,
+				4B46CB0A2833A543006DB41E /* ProfileFooterView.xib */,
+				4B46CB0628338540006DB41E /* ProfileTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,8 +333,10 @@
 				401B3CE92832790400C4B5A9 /* LaunchScreen.storyboard in Resources */,
 				401B3D272832868700C4B5A9 /* Address.storyboard in Resources */,
 				4B46CB0028333F11006DB41E /* LiveCollectionViewCell.xib in Resources */,
+				4B46CB0C2833A543006DB41E /* ProfileFooterView.xib in Resources */,
 				401B3CE62832790400C4B5A9 /* Assets.xcassets in Resources */,
 				401B3D252832866300C4B5A9 /* Message.storyboard in Resources */,
+				4B46CB0828338540006DB41E /* ProfileTableViewCell.xib in Resources */,
 				401B3CE42832790100C4B5A9 /* Main.storyboard in Resources */,
 				401B3D292832869600C4B5A9 /* Profile.storyboard in Resources */,
 				401B3D23283283FF00C4B5A9 /* Home.storyboard in Resources */,
@@ -368,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B46CAF328333145006DB41E /* ssViewController.swift in Sources */,
+				4B46CB0B2833A543006DB41E /* ProfileFooterView.swift in Sources */,
 				401B3CDD2832790100C4B5A9 /* AppDelegate.swift in Sources */,
 				4B46CAF92833366C006DB41E /* MainNavigationController.swift in Sources */,
 				4B46CAF128332E6F006DB41E /* UIColor-Extension.swift in Sources */,
@@ -376,6 +402,8 @@
 				4B46CAFF28333F11006DB41E /* LiveCollectionViewCell.swift in Sources */,
 				4B46CAFB28333902006DB41E /* MainBaseViewController.swift in Sources */,
 				401B3D2B283287C200C4B5A9 /* HomeViewController.swift in Sources */,
+				4B46CB0728338540006DB41E /* ProfileTableViewCell.swift in Sources */,
+				4B46CB02283382BF006DB41E /* ProfileViewController.swift in Sources */,
 				4B46CAF7283335ED006DB41E /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

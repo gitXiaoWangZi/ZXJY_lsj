@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = kGlobalBackColor
         
         navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -35,7 +35,7 @@ class BaseViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 
-    lazy var navView : UIView = {
+    public lazy var navView : UIView = {
         let navView = UIView()
         navView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kNavBarAndStatusBarHeight)
         navView.backgroundColor = .white

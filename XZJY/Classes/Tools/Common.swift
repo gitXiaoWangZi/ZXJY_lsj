@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 ///*屏幕宽度*
 let kScreenWidth = UIScreen.main.bounds.size.width
@@ -41,3 +42,4 @@ let kNavAndTabHeight = (kNavBarAndStatusBarHeight + kTabBarHeight)
 let kNavHeight = 44.0
 
 let kGlobalColor = UIColor(hex: "#904097")
+let kGlobalBackColor = UIColor(hex: "#fffcff")
