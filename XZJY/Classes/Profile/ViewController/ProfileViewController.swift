@@ -18,9 +18,7 @@ class ProfileViewController: BaseViewController {
         tableV.delegate = self
         tableV.dataSource = self
         tableV.separatorStyle = .none
-        tableV.tableHeaderView = UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: kScreenWidth, height: 0)))
         tableV.register(UINib(nibName: "ProfileTableViewCell", bundle: nibBundle), forCellReuseIdentifier: cellId)
-        tableV.register(HeaderView.self, forHeaderFooterViewReuseIdentifier: headerViewId)
         tableV.tableHeaderView = ProfileTableViewHeaderView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 150))
         let footerV = ProfileFooterView.profileFooterView()
         footerV.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 108)
@@ -83,25 +81,23 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerViewId)
-        return headerView
+        return UIView()
     }
     
-}
-
-// MARK: sectionHeader
-private class HeaderView : UITableViewHeaderFooterView {
-    
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
 }

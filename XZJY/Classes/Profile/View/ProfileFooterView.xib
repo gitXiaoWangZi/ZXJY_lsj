@@ -18,14 +18,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="583" height="0.5"/>
                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="0.5" id="CTq-jB-hd2"/>
+                        <constraint firstAttribute="height" constant="0.40000000000000002" id="CTq-jB-hd2"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5d-p6-lFf">
                     <rect key="frame" x="0.0" y="49.5" width="583" height="0.5"/>
                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="0.5" id="hj6-pL-jNZ"/>
+                        <constraint firstAttribute="height" constant="0.40000000000000002" id="hj6-pL-jNZ"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdE-Er-7nD" userLabel="versionView">
@@ -46,11 +46,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号 1.2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RO-ux-aiD">
-                    <rect key="frame" x="250.5" y="70" width="82" height="18"/>
+                    <rect key="frame" x="256" y="55" width="71.5" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="7RZ-Fr-VUT"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -72,7 +72,7 @@
                 <constraint firstItem="uNZ-dL-x8B" firstAttribute="leading" secondItem="xVu-cV-s2p" secondAttribute="leading" id="le1-gZ-Ixe"/>
                 <constraint firstItem="L5d-p6-lFf" firstAttribute="top" secondItem="uXe-zE-TY6" secondAttribute="bottom" constant="9.5" id="m7l-i3-bZK"/>
                 <constraint firstItem="7aV-gk-hG6" firstAttribute="top" secondItem="uNZ-dL-x8B" secondAttribute="bottom" id="u6b-Hj-NCE"/>
-                <constraint firstItem="1RO-ux-aiD" firstAttribute="top" secondItem="L5d-p6-lFf" secondAttribute="bottom" constant="20" id="wFi-hC-zhZ"/>
+                <constraint firstItem="1RO-ux-aiD" firstAttribute="top" secondItem="L5d-p6-lFf" secondAttribute="bottom" constant="5" id="wFi-hC-zhZ"/>
                 <constraint firstItem="1RO-ux-aiD" firstAttribute="centerX" secondItem="xVu-cV-s2p" secondAttribute="centerX" id="yHv-nw-zPY"/>
                 <constraint firstItem="7aV-gk-hG6" firstAttribute="leading" secondItem="xVu-cV-s2p" secondAttribute="leading" id="zdU-Ms-StF"/>
             </constraints>
