@@ -42,4 +42,4 @@ let kNavAndTabHeight = (kNavBarAndStatusBarHeight + kTabBarHeight)
 let kNavHeight = 44.0
 
 let kGlobalColor = UIColor(hex: "#904097")
-let kGlobalBackColor = UIColor(hex: "#fffcff")
+let kGlobalBackColor = UIColor(hex: "#fcfcfc")

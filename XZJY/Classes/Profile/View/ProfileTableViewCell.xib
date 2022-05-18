@@ -48,6 +48,7 @@
                         <rect key="frame" x="335" y="10" width="30" height="30"/>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="whw-Va-qpQ" secondAttribute="trailing" id="9rz-jh-M7f"/>
                     <constraint firstItem="Vxb-8S-n31" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BBB-fx-Qgm"/>
@@ -63,6 +64,7 @@
                     <constraint firstItem="lDa-AL-2ez" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yd8-ND-kgw"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="bottomLeadingCons" destination="amK-de-ghf" id="y17-XF-U5K"/>
                 <outlet property="bottomLine" destination="whw-Va-qpQ" id="Tnv-Dj-Ktl"/>

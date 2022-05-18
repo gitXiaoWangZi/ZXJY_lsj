@@ -14,7 +14,7 @@ class ProfileViewController: BaseViewController {
 
     private lazy var tableView : UITableView = {
         let tableV = UITableView(frame: CGRect.zero, style: .grouped)
-        tableV.backgroundColor = kGlobalBackColor
+        tableV.backgroundColor = .white
         tableV.delegate = self
         tableV.dataSource = self
         tableV.separatorStyle = .none
