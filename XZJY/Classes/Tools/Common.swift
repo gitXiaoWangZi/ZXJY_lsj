@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import Kingfisher
 
 ///*屏幕宽度*
 let kScreenWidth = UIScreen.main.bounds.size.width

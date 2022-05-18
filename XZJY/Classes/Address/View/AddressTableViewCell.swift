@@ -14,22 +14,17 @@ class AddressTableViewCell: UITableViewCell {
     
     var model : [String : Any]? = [String : Any]() {
         didSet {
-            
-//            do {
-//                guard let contactImage = model?["contactImage"] else {
-//                    iconImageView.image = UIImage(named: "profile_setting")
-//                    return
-//                }
-//                let image = contactImage as! String
-//                guard image.count != 0 else {
-//                    return
-//                }
-//                let url = URL(string: (image as! String))!
-//                let data = try Data(contentsOf: url)
-//                iconImageView.image = UIImage(data: data)
-//            } catch {
-//                print("shibai")
+//            let contactImage = model?["contactImage"]
+//            guard contactImage.count != 0  else {
+//                return
 //            }
+//            let contactImageUrl = URL(string: contactImage)
+//            iconImageView.kf.setImage(with: contactImageUrl, placeholder: UIImage(named: "profile_setting"), options: nil) { receivedSize, totalSize in
+//                
+//            } completionHandler: { image, error, cacheType, imageURL in
+//                
+//            }
+
             
             guard let name = model?["contactName"] else {
                 return

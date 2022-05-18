@@ -8,6 +8,6 @@ target 'XZJY' do
 pod 'Alamofire'
 pod 'SnapKit'
 pod 'SwiftyJSON', '~> 4.0'
-#pod 'Kingfisher'
+pod 'Kingfisher'
 
 end
