@@ -30,6 +30,7 @@
 		4B46CB0828338540006DB41E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B46CB0628338540006DB41E /* ProfileTableViewCell.xib */; };
 		4B46CB0B2833A543006DB41E /* ProfileFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CB092833A543006DB41E /* ProfileFooterView.swift */; };
 		4B46CB0C2833A543006DB41E /* ProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B46CB0A2833A543006DB41E /* ProfileFooterView.xib */; };
+		4B46CB0E2834916C006DB41E /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CB0D2834916C006DB41E /* AddressViewController.swift */; };
 		F82CB60CEA63C4A3F6FD12C3 /* Pods_XZJY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751F1343D496AC94EF45B92 /* Pods_XZJY.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		4B46CB0628338540006DB41E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		4B46CB092833A543006DB41E /* ProfileFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFooterView.swift; sourceTree = "<group>"; };
 		4B46CB0A2833A543006DB41E /* ProfileFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFooterView.xib; sourceTree = "<group>"; };
+		4B46CB0D2834916C006DB41E /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		9F278B843410F9FE1457E3C8 /* Pods-XZJY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.debug.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.debug.xcconfig"; sourceTree = "<group>"; };
 		DF80106840366EE820151512 /* Pods-XZJY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.release.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				401B3D262832868700C4B5A9 /* Address.storyboard */,
+				4B46CB0D2834916C006DB41E /* AddressViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				401B3CDD2832790100C4B5A9 /* AppDelegate.swift in Sources */,
 				4B46CAF92833366C006DB41E /* MainNavigationController.swift in Sources */,
 				4B46CAF128332E6F006DB41E /* UIColor-Extension.swift in Sources */,
+				4B46CB0E2834916C006DB41E /* AddressViewController.swift in Sources */,
 				401B3CDF2832790100C4B5A9 /* SceneDelegate.swift in Sources */,
 				401B3D2D28328A0E00C4B5A9 /* UIBarButtonItem-Extension.swift in Sources */,
 				4B46CAFF28333F11006DB41E /* LiveCollectionViewCell.swift in Sources */,
