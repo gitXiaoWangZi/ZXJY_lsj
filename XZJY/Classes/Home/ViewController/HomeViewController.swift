@@ -31,23 +31,19 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.orange
         
         setupUI()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        navigationController?.pushViewController(ssViewController(), animated: true)
     }
 
 }
 // MARK: -设置UI界面
 extension HomeViewController {
     private func setupUI() {
+        view.backgroundColor = UIColor.orange
         //设置navbar
         setupNavBar()
         //设置collectionview
-        setupCollectionView()
+//        setupCollectionView()
     }
     
     private func setupNavBar() {
