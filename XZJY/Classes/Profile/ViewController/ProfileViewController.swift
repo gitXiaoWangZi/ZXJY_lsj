@@ -8,21 +8,21 @@
 import UIKit
  
 private let cellId = "cellid"
-private let headerViewId = "headerViewId"
 
 class ProfileViewController: BaseViewController {
 
     private lazy var tableView : UITableView = {
         let tableV = UITableView(frame: CGRect.zero, style: .grouped)
-        tableV.backgroundColor = .white
+        tableV.backgroundColor = kGlobalBackColor
         tableV.delegate = self
         tableV.dataSource = self
         tableV.separatorStyle = .none
         tableV.register(UINib(nibName: "ProfileTableViewCell", bundle: nibBundle), forCellReuseIdentifier: cellId)
-        tableV.tableHeaderView = ProfileTableViewHeaderView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 150))
+        tableV.tableHeaderView = ProfileTableViewHeaderView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 200))
         let footerV = ProfileFooterView.profileFooterView()
         footerV.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 108)
         tableV.tableFooterView = footerV
+        tableV.contentOffset = CGPoint(x: 0, y: -kStatusBarHeight)
         return tableV
     }()
     
@@ -57,6 +57,12 @@ extension ProfileViewController {
         self.navView.isHidden = true
         tableView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight-kTabBarHeight)
         view.addSubview(tableView)
+        
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never;
+        }else{
+            self.automaticallyAdjustsScrollViewInsets = false;
+        }
     }
 }
 
@@ -85,6 +91,9 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 10
+        }
         return 0
     }
     
@@ -105,7 +114,27 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource{
 // MARK: tableView HeaderView
 class ProfileTableViewHeaderView : UIView {
     
-    var iconImageView : UIImageView = UIImageView()
+    lazy var iconImageView : UIImageView = {
+        let iconImageView = UIImageView(image: UIImage(named: "profile_setting"))
+        return iconImageView
+    }()
+    lazy var nameLabel : UILabel = {
+        let nameLabel = UILabel(frame: CGRect.zero)
+        nameLabel.text = "刘圣洁"
+        nameLabel.font = UIFont.systemFont(ofSize: 18)
+        nameLabel.textColor = .darkGray
+        return nameLabel
+    }()
+    lazy var arrowImageView : UIImageView = {
+        let arrowImageView = UIImageView(image: UIImage(named: "right_arrow"))
+        return arrowImageView
+    }()
+    
+    lazy var lineView : UIView = {
+        let lineView = UIView(frame: CGRect.zero)
+        lineView.backgroundColor = UIColor(hex: "#c6c6c8")
+        return lineView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -122,6 +151,9 @@ extension ProfileTableViewHeaderView {
     private func setupUI() {
         backgroundColor = .white
         addSubview(iconImageView)
+        addSubview(nameLabel)
+        addSubview(arrowImageView)
+        addSubview(lineView)
         iconImageView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
             make.bottom.equalToSuperview().offset(-20)
@@ -129,6 +161,20 @@ extension ProfileTableViewHeaderView {
         }
         iconImageView.layer.cornerRadius = 35
         iconImageView.layer.masksToBounds = true
-        iconImageView.image = UIImage(named: "profile_setting")
+        
+        nameLabel.snp.makeConstraints { make in
+            make.left.equalTo(iconImageView.snp_right).offset(10)
+            make.centerY.equalTo(iconImageView.snp_centerY)
+        }
+        
+        arrowImageView.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-10)
+            make.centerY.equalTo(iconImageView.snp_centerY)
+        }
+        lineView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-0.4)
+            make.height.equalTo(0.4)
+        }
     }
 }
