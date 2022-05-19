@@ -5,9 +5,9 @@ target 'XZJY' do
 # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-pod 'Alamofire', '~> 3.0.0'
-#pod 'SnapKit'
-#pod 'SwiftyJSON', '~> 4.0'
-#pod 'Kingfisher'
+pod 'Alamofire'
+pod 'SnapKit'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'Kingfisher'
 
 end
