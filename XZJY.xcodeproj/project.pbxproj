@@ -36,6 +36,7 @@
 		4B46CB1B2834B50D006DB41E /* AddressData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B46CB1A2834B50D006DB41E /* AddressData.json */; };
 		4B46CB1E2834BACD006DB41E /* AddressListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CB1D2834BACD006DB41E /* AddressListModel.swift */; };
 		4B46CB202834D8E1006DB41E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CB1F2834D8E1006DB41E /* MessageViewController.swift */; };
+		4BC89C042836363400AD8BC3 /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC89C032836363400AD8BC3 /* AddressViewModel.swift */; };
 		F82CB60CEA63C4A3F6FD12C3 /* Pods_XZJY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751F1343D496AC94EF45B92 /* Pods_XZJY.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		4B46CB1A2834B50D006DB41E /* AddressData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AddressData.json; sourceTree = "<group>"; };
 		4B46CB1D2834BACD006DB41E /* AddressListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListModel.swift; sourceTree = "<group>"; };
 		4B46CB1F2834D8E1006DB41E /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		4BC89C032836363400AD8BC3 /* AddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModel.swift; sourceTree = "<group>"; };
 		9F278B843410F9FE1457E3C8 /* Pods-XZJY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.debug.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.debug.xcconfig"; sourceTree = "<group>"; };
 		DF80106840366EE820151512 /* Pods-XZJY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZJY.release.xcconfig"; path = "Target Support Files/Pods-XZJY/Pods-XZJY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +199,8 @@
 		401B3D0928327B6300C4B5A9 /* Address */ = {
 			isa = PBXGroup;
 			children = (
+				4BC89C02283635F100AD8BC3 /* ViewModel */,
+				4BC89C01283635DA00AD8BC3 /* Logic */,
 				4B46CB1C2834BAB3006DB41E /* Model */,
 				4B46CB192834B4F6006DB41E /* Data */,
 				4B46CB1128349D9D006DB41E /* View */,
@@ -309,6 +313,21 @@
 				4B46CB1D2834BACD006DB41E /* AddressListModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4BC89C01283635DA00AD8BC3 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		4BC89C02283635F100AD8BC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BC89C032836363400AD8BC3 /* AddressViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D5219932A54121E794AECB7A /* Pods */ = {
@@ -455,6 +474,7 @@
 				4B46CB182834A12A006DB41E /* NetworkTools.swift in Sources */,
 				4B46CB202834D8E1006DB41E /* MessageViewController.swift in Sources */,
 				4B46CAFF28333F11006DB41E /* LiveCollectionViewCell.swift in Sources */,
+				4BC89C042836363400AD8BC3 /* AddressViewModel.swift in Sources */,
 				4B46CAFB28333902006DB41E /* MainBaseViewController.swift in Sources */,
 				401B3D2B283287C200C4B5A9 /* HomeViewController.swift in Sources */,
 				4B46CB0728338540006DB41E /* ProfileTableViewCell.swift in Sources */,

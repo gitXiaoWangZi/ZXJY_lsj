@@ -23,14 +23,30 @@ class AddressViewController: BaseViewController {
     }()
     
     lazy var tableView : UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .plain)
+        let tableView = UITableView(frame: CGRect.zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.backgroundColor = kGlobalBackColor
         tableView.register(UINib(nibName: "AddressTableViewCell", bundle: nibBundle), forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.sectionIndexColor = .darkGray
+        tableView.sectionIndexBackgroundColor = .clear
+        tableView.sectionIndexTrackingBackgroundColor = .clear
         return tableView
+    }()
+    
+    lazy var footerView : UIView = {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 80))
+        footerView.backgroundColor = kGlobalBackColor
+        return footerView
+    }()
+    
+    lazy var footerTitleL : UILabel = {
+        let footerTitleL = UILabel(frame: CGRect.zero)
+        footerTitleL.textColor = .darkGray
+        footerTitleL.font = UIFont.systemFont(ofSize: 11)
+        footerTitleL.textAlignment = NSTextAlignment.center
+        return footerTitleL
     }()
 
     override func viewDidLoad() {
@@ -73,6 +89,12 @@ extension AddressViewController {
             }
             titleArr.append(charName)
         }
+        let peopleNum = configData(listArr: addressArr)
+        guard peopleNum.0 != 0 || peopleNum.1 != 0 else {
+            footerTitleL.isHidden = true
+            return
+        }
+        footerTitleL.text = "\(peopleNum.0)个群聊、\(peopleNum.1)位联系人"
     }
 }
 
@@ -88,6 +110,15 @@ extension AddressViewController {
             make.left.right.equalTo(0)
             make.bottom.equalTo(-kTabBarHeight)
         }
+        
+        
+        //创建tableviewFooterview
+        footerView.addSubview(footerTitleL)
+        footerTitleL.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        
+        tableView.tableFooterView = footerView
     }
 }
 
@@ -118,7 +149,7 @@ extension AddressViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        return 30
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -131,5 +162,13 @@ extension AddressViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return index
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
     }
 }
