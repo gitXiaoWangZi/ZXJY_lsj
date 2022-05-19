@@ -12,24 +12,20 @@ class AddressTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    var model : [String : Any]? = [String : Any]() {
+    var model : AddressModel? {
         didSet {
-//            let contactImage = model?["contactImage"]
-//            guard contactImage.count != 0  else {
-//                return
-//            }
-//            let contactImageUrl = URL(string: contactImage)
-//            iconImageView.kf.setImage(with: contactImageUrl, placeholder: UIImage(named: "profile_setting"), options: nil) { receivedSize, totalSize in
-//                
-//            } completionHandler: { image, error, cacheType, imageURL in
-//                
-//            }
-
-            
-            guard let name = model?["contactName"] else {
+            guard let contactImage = model?.contactImage else {
+                iconImageView.image = UIImage(named: "profile_setting")
                 return
             }
-            nameLabel.text = (name as! String)
+            iconImageView.kf.setImage(with: URL(string: contactImage), placeholder: UIImage(named: "profile_setting"), options: nil) { receivedSize, totalSize in
+                
+            } completionHandler: { image, error, cacheType, imageURL in
+                
+            }
+            
+            guard let name = model?.contactName else {return}
+            nameLabel.text = name
         }
     }
     

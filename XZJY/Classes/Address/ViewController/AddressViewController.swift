@@ -12,8 +12,8 @@ private let cellID = "cellId"
 
 class AddressViewController: BaseViewController {
     
-    lazy var addressArr : [AnyObject] = {
-        var addressArr = [AnyObject]()
+    lazy var addressArr : [AddressListModel] = {
+        var addressArr = [AddressListModel]()
         return addressArr
     }()
     
@@ -57,17 +57,21 @@ extension AddressViewController {
         do {
             let data = try Data(contentsOf: url)
             let jsonData : Dictionary = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String, AnyObject>
-            let dataDic = JSON(jsonData).rawValue as! NSDictionary
-            addressArr = dataDic["userList"] as! [AnyObject]
+            let userList = jsonData["userList"] as! NSArray
+            for item in userList {
+                let i = JSON(item).dictionaryObject
+                let k = AddressListModel(json: JSON(i as Any))
+                addressArr.append(k)
+            }
             print(addressArr)
         } catch let error as Error? {
             print("读取本地数据出现错误！",error ?? "")
         }
         for item in addressArr{
-            guard let charName = item["charName"] else {
+            guard let charName = item.charName else {
                 return
             }
-            titleArr.append(charName as! String)
+            titleArr.append(charName)
         }
     }
 }
@@ -94,18 +98,18 @@ extension AddressViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let dataDic = addressArr[section] as! [String : AnyObject]
-        let rowArr = dataDic["contactList"] as! [AnyObject]
-        return rowArr.count
+        let model = addressArr[section]
+        let rowArr = model.contactList
+        return rowArr?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dataDic = addressArr[indexPath.section] as! [String : AnyObject]
-        let rowArr = dataDic["contactList"] as! [AnyObject]
-        let dic = rowArr[indexPath.row] as! [String : Any]
+        let model = addressArr[indexPath.section]
+        let rowArr = model.contactList
+        let item = rowArr?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! AddressTableViewCell
         cell.selectionStyle = .none
-        cell.model = dic
+        cell.model = item
         return cell
     }
     
