@@ -10,6 +10,7 @@ import UIKit
 private let cellID = "cellid"
 class HomeViewController: BaseViewController {
     
+    @IBOutlet weak var textField: UITextField!
     private lazy var collectionView : UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: kScreenWidth - 40, height: 100)
@@ -35,13 +36,19 @@ class HomeViewController: BaseViewController {
         setupUI()
     }
 
+    @IBAction func jumpAction(_ sender: UIButton) {
+        let desVC = DesViewController()
+        desVC.addressStr = textField.text!
+        navigationController?.pushViewController(desVC, animated: true)
+    }
 }
 // MARK: -设置UI界面
 extension HomeViewController {
     private func setupUI() {
         view.backgroundColor = UIColor.orange
         //设置navbar
-        setupNavBar()
+//        setupNavBar()
+        self.navView.isHidden = true
         //设置collectionview
 //        setupCollectionView()
     }

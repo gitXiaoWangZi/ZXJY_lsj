@@ -44,3 +44,4 @@ let kNavHeight = 44.0
 
 let kGlobalColor = UIColor(hex: "#904097")
 let kGlobalBackColor = UIColor(hex: "#f6f6f6")
+let kjkmColor = UIColor(hex: "#6CAA6E")
