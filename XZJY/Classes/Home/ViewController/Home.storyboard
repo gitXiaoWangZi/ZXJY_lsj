@@ -52,6 +52,18 @@
                                     <action selector="jumpAction:" destination="IEp-gT-ull" eventType="touchUpInside" id="i9h-42-FMO"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aj1-zd-EGI">
+                                <rect key="frame" x="121" y="330" width="149" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="nan"/>
+                                    <segment title="gao"/>
+                                    <segment title="work"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectAddress:" destination="IEp-gT-ull" eventType="valueChanged" id="buF-SU-T5o"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AWh-F3-Vge"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -20,6 +20,20 @@ class DesViewController: UIViewController {
         return imageV
     }()
     
+    private lazy var back : UIButton = {
+        let back = UIButton(frame: CGRect.zero)
+        back.setTitle("", for: .normal)
+        let action = UIAction { [self] kAction in
+            navigationController?.popViewController(animated: true)
+        }
+        if #available(iOS 14.0, *) {
+            back.addAction(action, for: .touchUpInside)
+        } else {
+            // Fallback on earlier versions
+        }
+        return back
+    }()
+    
     private var cycleTimer : Timer!
     private var v : UIView = {
         let v = UIView(frame: CGRect.zero)
@@ -91,6 +105,13 @@ class DesViewController: UIViewController {
             make.centerX.equalTo(v)
             make.width.equalTo(100)
             make.height.equalTo(30)
+        }
+        
+        view.addSubview(back)
+        back.snp.makeConstraints { make in
+            make.top.equalTo(0)
+            make.right.equalTo(0)
+            make.width.height.equalTo(100)
         }
     }
     

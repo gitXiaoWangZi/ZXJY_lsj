@@ -11,6 +11,7 @@ private let cellID = "cellid"
 class HomeViewController: BaseViewController {
     
     @IBOutlet weak var textField: UITextField!
+    
     private lazy var collectionView : UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: kScreenWidth - 40, height: 100)
@@ -38,9 +39,25 @@ class HomeViewController: BaseViewController {
 
     @IBAction func jumpAction(_ sender: UIButton) {
         let desVC = DesViewController()
-        desVC.addressStr = textField.text!
+        if textField.text?.count == 0 {
+            desVC.addressStr = "南苑站"
+        }else{
+            desVC.addressStr = textField.text!
+        }
         navigationController?.pushViewController(desVC, animated: true)
     }
+    
+    @IBAction func selectAddress(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            textField.text = "南苑站"
+        }else if sender.selectedSegmentIndex == 1 {
+            textField.text = "高沙路站"
+        }else {
+            textField.text = "晓城天地一幢"
+        }
+    }
+    
+    
 }
 // MARK: -设置UI界面
 extension HomeViewController {
@@ -62,6 +79,8 @@ extension HomeViewController {
     private func setupCollectionView(){
         view.addSubview(collectionView)
     }
+    
+    
 }
 
 // MARK: -设置CollectionView代理
