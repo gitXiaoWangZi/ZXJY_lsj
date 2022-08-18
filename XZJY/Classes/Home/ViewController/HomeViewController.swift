@@ -10,6 +10,8 @@ import UIKit
 private let cellID = "cellid"
 class HomeViewController: BaseViewController {
     
+    
+    var timeDur : String = "24hour"
     @IBOutlet weak var textField: UITextField!
     
     private lazy var collectionView : UICollectionView = {
@@ -44,6 +46,7 @@ class HomeViewController: BaseViewController {
         }else{
             desVC.addressStr = textField.text!
         }
+        desVC.iconName = timeDur
         navigationController?.pushViewController(desVC, animated: true)
     }
     
@@ -57,6 +60,13 @@ class HomeViewController: BaseViewController {
         }
     }
     
+    @IBAction func timeDur(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            timeDur = "24hour"
+        }else {
+            timeDur = "48hour"
+        }
+    }
     
 }
 // MARK: -设置UI界面

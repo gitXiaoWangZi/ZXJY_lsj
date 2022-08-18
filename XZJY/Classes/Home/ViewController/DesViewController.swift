@@ -16,9 +16,11 @@ class DesViewController: UIViewController {
     }
     private lazy var imageV : UIImageView = {
         let imageV = UIImageView(frame: view.bounds)
-        imageV.image = UIImage(named: "1")
+        imageV.image = UIImage(named: "48hour")
         return imageV
     }()
+    
+    var iconName : String = ""
     
     private lazy var back : UIButton = {
         let back = UIButton(frame: CGRect.zero)
@@ -70,6 +72,7 @@ class DesViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(imageV)
+        imageV.image = UIImage(named: iconName)
         
         let statusV = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kStatusBarHeight))
         statusV.backgroundColor = .white;
@@ -103,7 +106,7 @@ class DesViewController: UIViewController {
         addressL.snp.makeConstraints { make in
             make.top.equalTo(v.snp_bottom).offset(50)
             make.centerX.equalTo(v)
-            make.width.equalTo(100)
+            make.width.equalTo(170)
             make.height.equalTo(30)
         }
         

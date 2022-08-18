@@ -64,6 +64,17 @@
                                     <action selector="selectAddress:" destination="IEp-gT-ull" eventType="valueChanged" id="buF-SU-T5o"/>
                                 </connections>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="puY-Jh-Zkn">
+                                <rect key="frame" x="130" y="267" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="timeDur:" destination="IEp-gT-ull" eventType="valueChanged" id="WAN-NZ-fUd"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AWh-F3-Vge"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
